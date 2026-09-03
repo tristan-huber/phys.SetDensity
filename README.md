@@ -2,7 +2,7 @@
 
 # phys.SetDensity
 
-![](/project.svg)
+![](/project.png)
 
 ## Inputs
 
