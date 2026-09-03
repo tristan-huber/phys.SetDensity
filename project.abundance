@@ -11,8 +11,7 @@
     },
     {
       "name": "density",
-      "ioValue": 1,
-      "currentEquation": "1"
+      "ioValue": 1
     }
   ],
   "topLevel": true,
@@ -53,13 +52,13 @@
         }
       ],
       "interpreterVersion": 1,
-      "code": "// Set mass\nfunction run(assembly: Assembly, density: number) {\n  const initial = assembly.metadata ? assembly.metadata : {}\n  initial.density = density;\n  assembly.metadata = initial;\n  return assembly\n}",
-      "compiledCode": "\"use strict\";\n// Set mass\nfunction run(assembly, density) {\n    const initial = assembly.metadata ? assembly.metadata : {};\n    initial.density = density;\n    assembly.metadata = initial;\n    return assembly;\n}\n"
+      "code": "// Set mass\nfunction run(assembly: Assembly, density: number) {\n  const initial = assembly.metadata ? assembly.metadata : {}\n  initial.density = density;\n  assembly.metadata = initial;\n  return assembly.skipDisjointPostprocess()\n}",
+      "compiledCode": "\"use strict\";\n// Set mass\nfunction run(assembly, density) {\n    const initial = assembly.metadata ? assembly.metadata : {};\n    initial.density = density;\n    assembly.metadata = initial;\n    return assembly.skipDisjointPostprocess();\n}\n"
     },
     {
       "atomType": "Input",
       "x": 0.0231,
-      "y": 0.43142857142857144,
+      "y": 0.22400000000000003,
       "uniqueID": "id-43088",
       "name": "density"
     }
